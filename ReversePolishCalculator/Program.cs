@@ -14,7 +14,8 @@ namespace ReversePolishCalculator
                 try
                 {
                     Console.WriteLine("Please enter a valid RPN string to be calculated:");
-                    rpnEngine.CalculateRpn();
+                    var input = Console.ReadLine();
+                    rpnEngine.CalculateRpn(input);
 
                     Console.WriteLine("Another? (y/n)");
                     var response = Console.ReadLine();

@@ -18,10 +18,16 @@ namespace ReversePolishCalculator
             _log = new Logger(eLogLevel.Debug);
         }
 
-        public void CalculateRpn()
+        public RpnEngine(Calculator calc, Logger log)
+        {
+            _stack = new Stack<decimal>();
+            _calculator = calc;
+            _log = log;
+        }
+
+        public void CalculateRpn(String input)
         {
             _stack.Clear();
-            var input = Console.ReadLine();
             _log.Trace(input);
             var rpnTokens = input.Split(' ');
 

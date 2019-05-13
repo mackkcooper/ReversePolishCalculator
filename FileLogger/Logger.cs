@@ -15,7 +15,7 @@ namespace FileLogger
         public void Trace(string logString)
         { LogBase(eLogLevel.Trace, logString); }
 
-        public void Debug(string logString)
+        public virtual void Debug(string logString)
         { LogBase(eLogLevel.Debug, logString); }
 
         public void Info(string logString)
@@ -27,7 +27,7 @@ namespace FileLogger
         public void Error(string logString)
         { LogBase(eLogLevel.Error, logString); }
 
-        public void Fatal(string logString)
+        public virtual void Fatal(string logString)
         { LogBase(eLogLevel.Fatal, logString); }
 
         private void LogBase(eLogLevel logLevel, string logString)
